@@ -1,0 +1,53 @@
+package com.array.object;
+class Student{
+	String stuName;
+	String stuRollNo;
+	String dept;
+	Subject subDetails[];
+	/*
+	 * Subject subDetails[] = {
+			new Subject("s101", 100, "si1"),
+			new Subject("s102", 100, "si2"),
+			new Subject("s103", 100, "si3"),
+			new Subject("s104", 100, "si4")
+	};
+	 */
+	subMark[] sub;
+	public Student(String stuName, String stuRollNo, String dept, subMark[] sub) {
+		super();
+		this.stuName = stuName;
+		this.stuRollNo = stuRollNo;
+		this.dept = dept;
+		this.sub = sub;
+	}
+	public void setSub(subMark[] sub) {
+		this.sub = sub;
+	}
+	
+	
+}
+class Subject{
+	String subName;
+	int maxMarks;
+	String subId;
+	public Subject(String subName, int maxMarks, String subId) {
+		this.subName = subName;
+		this.maxMarks = maxMarks;
+		this.subId = subId;
+	}
+}
+class subMark{
+	Subject subject;
+	int marks;
+	public subMark(Subject subject, int marks) {
+		super();
+		this.subject = subject;
+		this.marks = marks;
+	}	
+}
+public class arrayOfObjects {
+	public static void main(String args[]) {
+		
+		
+	}
+}

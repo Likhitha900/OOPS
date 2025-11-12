@@ -1,0 +1,98 @@
+package com.array.object;
+
+import java.util.Arrays;
+
+class Student{
+	String stuName;
+	String stuRollNo;
+	String dept;
+	Subject subDetails[];
+	/*
+	 * Subject subDetails[] = {
+			new Subject("s101", 100, "si1"),
+			new Subject("s102", 100, "si2"),
+			new Subject("s103", 100, "si3"),
+			new Subject("s104", 100, "si4")
+	};
+	 */
+	subMark[] sub;
+	public Student(String stuName, String stuRollNo, String dept, Subject[] subDetails, subMark[] sub) {
+		this.stuName = stuName;
+		this.stuRollNo = stuRollNo;
+		this.dept = dept;
+		this.subDetails = subDetails;
+		this.sub = sub;
+	}
+	/*
+	 * public void setSub(subMark[] sub) {
+		this.sub = sub;
+	}
+	 */
+	@Override
+	public String toString() {
+		return "stuName=" + stuName + ", stuRollNo=" + stuRollNo + ", dept=" + dept + ", subDetails="
+				+ Arrays.toString(subDetails) + ", sub=" + Arrays.toString(sub) + "]";
+	}
+	
+	
+	
+	
+}
+class Subject{
+	String subName;
+	int maxMarks;
+	String subId;
+	public Subject(String subName, int maxMarks, String subId) {
+		this.subName = subName;
+		this.maxMarks = maxMarks;
+		this.subId = subId;
+	}
+	@Override
+	public String toString() {
+		return "[subName=" + subName + ", maxMarks=" + maxMarks + ", subId=" + subId + "]";
+	}
+	
+	
+}
+class subMark{
+	Subject subject;
+	int marks;
+	public subMark(Subject subject, int marks) {
+		super();
+		this.subject = subject;
+		this.marks = marks;
+	}
+	@Override
+	public String toString() {
+		return "{" + subject + ", marks=" + marks + "}";
+	}
+		
+	
+}
+public class arrayOfObjects {
+	public static void main(String args[]) {
+		Subject subDetails[] = {
+				new Subject("s101", 100, "si1"),
+				new Subject("s102", 100, "si2"),
+				new Subject("s103", 100, "si3"),
+				new Subject("s104", 100, "si4")
+		};
+		subMark subMarks[] = {
+				new subMark(subDetails[0], 89),
+				new subMark(subDetails[1], 98), 
+				new subMark(subDetails[2], 78),
+				new subMark(subDetails[3], 90)
+		};
+		Student s1 = new Student("Likhitha", "20121A05R5", "CSE", subDetails, subMarks);
+		System.out.println("Student Name: " +" "+ s2.stuName +"\n"+ "Student RollNo: "+" "+ s2.stuRollNo +"\n"+ "Student Department: "+" "+ s2.dept);
+		for(subMark sm : s1.sub) {
+			System.out.println(sm);
+		}
+		
+		Student s2 = new Student("Upendra", "20121A05R9", "CSE", subDetails, subMarks);
+		System.out.println("Student Name: " +" "+ s2.stuName +"\n"+ "Student RollNo: "+" "+ s2.stuRollNo +"\n"+ "Student Department: "+" "+ s2.dept);
+		for(subMark sm : s2.sub) {
+			System.out.println(sm);
+		}
+	}
+}

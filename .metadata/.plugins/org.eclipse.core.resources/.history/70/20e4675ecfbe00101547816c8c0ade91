@@ -1,0 +1,63 @@
+package com.Default.constructor;
+class empInfo{
+	private String empName;
+	private int empId;
+	private int empAge;
+	private String empLocation;
+	
+	public empInfo(String empName,int empId,int empAge,String empLocation) {
+		this.empName = empName;
+		this.empId = empId;
+		this.empAge = empAge;
+		this.empLocation = empLocation;
+	}
+	
+	public String getEmpName() {
+		return empName;
+	}
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+	public int getEmpAge() {
+		return empAge;
+	}
+
+	public void setEmpAge(int empAge) {
+		this.empAge = empAge;
+	}
+
+	public String getEmpLocation() {
+		return empLocation;
+	}
+
+	public void setEmpLocation(String empLocation) {
+		this.empLocation = empLocation;
+	}
+	public empInfo() {
+		empName = "Lakshmi";
+		empId = 2;
+		empLocation = "Amaravti";
+		empAge = 43;
+	}
+}
+
+public class privateInitializeSetterGetter3 {
+	public static void main(String args[]) {
+		empInfo e1 = new empInfo();
+		e1.setEmpAge(24);
+		e1.setEmpId(1);
+		e1.setEmpLocation("Bangalore");
+		e1.setEmpName("Upendra");
+		System.out.println("Employee e1 Age: " + e1.getEmpAge() +"\nempdent e1 Name: "+ e1.getEmpName() +"\nempdent e1 Id: "+e1.getEmpId()+"\nempdent e1 Location: "+e1.getEmpLocation());
+	}
+}

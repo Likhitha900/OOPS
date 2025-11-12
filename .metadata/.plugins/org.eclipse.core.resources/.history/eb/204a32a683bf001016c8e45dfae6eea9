@@ -1,0 +1,51 @@
+class bankAccount{
+	private String accountNumber;
+	private String holderName;
+	private double balance;
+	public bankAccount(String accountNumber, String holderName, double balance) {
+		super();
+		this.accountNumber = accountNumber;
+		this.holderName = holderName;
+		this.balance = balance;
+	}
+	
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	public String getHolderName() {
+		return holderName;
+	}
+	public void setHolderName(String holderName) {
+		this.holderName = holderName;
+	}
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+}
+public class BankAccount {
+	public static void main(String args[]) {
+		bankAccount bA = new bankAccount("20121A05R5", "Likhitha Tanguturi", 10000);
+		public double deposit(double amount) {
+			balance = balance+amount;
+			return balance;
+		}
+		public double withdraw(double amount) {
+			balance = balance - amount;
+			return balance;
+		}
+		public double displayAccountInfo() {
+			return balance;
+		}
+		
+		System.out.println(bA.deposit(1200));
+		System.out.println(bA.withdraw(500));
+		System.out.println(bA.displayAccountInfo());
+	}
+
+}

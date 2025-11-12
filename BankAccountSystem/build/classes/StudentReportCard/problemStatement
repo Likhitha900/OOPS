@@ -1,0 +1,7 @@
+Student Report Card
+
+Class: Student (name, rollNo, marks in 3 subjects)
+
+Method to calculate total and grade (A/B/C/Fail).
+
+Add another class School that stores multiple Student objects and displays toppers.

@@ -1,0 +1,10 @@
+package com.upgraded.StudentReportCard;
+
+public class ArtsStudent extends StudentInfo1
+ {
+	
+	@Override
+	public 
+	
+
+}

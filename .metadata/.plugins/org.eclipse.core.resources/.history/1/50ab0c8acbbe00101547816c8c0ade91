@@ -1,0 +1,23 @@
+package com.Default.constructor;
+
+class employeeInfo{
+	private String empName;
+	private int empId;
+	private int empAge;
+	private String empLocation;
+	
+	public employeeInfo(String empName,int empId,int empAge,String empLocation) {
+		this.empName = empName;
+		this.empId = empId;
+		this.empAge = empAge;
+		this.empLocation = empLocation;
+	}
+	
+	public employeeInfo() {
+		
+	}
+}
+
+public class InstancePrivateFileds2 {
+	
+}

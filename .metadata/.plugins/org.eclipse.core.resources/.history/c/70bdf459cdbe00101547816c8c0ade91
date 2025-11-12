@@ -1,0 +1,64 @@
+package com.Default.constructor;
+
+class employeeInfo{
+	private String empName;
+	private int empId;
+	private int empAge;
+	private String empLocation;
+	
+	public employeeInfo(String empName,int empId,int empAge,String empLocation) {
+		this.empName = empName;
+		this.empId = empId;
+		this.empAge = empAge;
+		this.empLocation = empLocation;
+	}
+	
+	public String getEmpName() {
+		return empName;
+	}
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+	public int getEmpAge() {
+		return empAge;
+	}
+
+	public void setEmpAge(int empAge) {
+		this.empAge = empAge;
+	}
+
+	public String getEmpLocation() {
+		return empLocation;
+	}
+
+	public void setEmpLocation(String empLocation) {
+		this.empLocation = empLocation;
+	}
+}
+
+public class InstancePrivateFilede2 {
+	public static void main(String args[]) {
+		employeeInfo e1 = new employeeInfo();
+		employeeInfo e2 = new employeeInfo("Likhitha", 1, 22, "AP");
+		/*
+		 * Here as the Instance variables are private, we can not access them with Objects
+		 
+		//System.out.println("employee e1 Age: " + e1.empAge +"\nemployee e1 Name: "+ e1.empName +"\nemployee e1 Id: "+e1.empId+"\nemployee e1 Location: "+e1.empLocation);
+		//System.out.println("employee e2 Age: " + e2.empAge +"\nemployee e2 Name: "+ e2.empName +"\nemployee e2 Id: "+e2.empId+"\nemployee e2 Location: "+e2.empLocation);
+		*/
+		
+		System.out.println("employee e1 Age: " + e1.getEmpAge() +"\nemployee e1 Name: "+ e1.getEmpName() +"\nemployee e1 Id: "+e1.getEmpId()+"\nemployee e1 Location: "+e1.getEmpLocation());
+		System.out.println("employee e2 Age: " + e2.empAge +"\nemployee e2 Name: "+ e2.empName +"\nemployee e2 Id: "+e2.empId+"\nemployee e2 Location: "+e2.empLocation);
+		
+	}
+}

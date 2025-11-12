@@ -1,0 +1,70 @@
+package com.BankInfo.OOPS;
+class BankInfoEncapsulat{
+	private String accountNumber;
+	private String holderName;
+	private double balance;
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	public String getHolderName() {
+		return holderName;
+	}
+	public void setHolderName(String holderName) {
+		this.holderName = holderName;
+	}
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	public BankInfoEncapsulat(String accountNumber, String holderName, double balance) {
+		super();
+		this.accountNumber = accountNumber;
+		this.holderName = holderName;
+		this.balance = balance;
+	}
+	public BankInfoEncapsulat() {
+	}
+	public double deposit(double amount) {
+		balance = balance+amount;
+		return balance;
+	}
+	public double withdraw(double amount) {
+		if(amount>balance) {
+			System.out.println("Can't withDraw as Amount to withdraw is greater than Balance present in Account");
+		}
+		else {
+			balance = balance - amount;
+			return balance;
+		}
+		return amount;
+	}
+	public BankInfoEncapsulat displayAccountInfo() {
+		return BankInfoEncapsulate;
+	}
+}
+public class bankInfoEncap {
+	public static void main(String args[]) {
+		BankInfoEncapsulat bie = new BankInfoEncapsulat();
+		bie.setAccountNumber("20121A05R5");
+		bie.setHolderName("Likhitha");
+		bie.setBalance(1000);
+		System.out.println("Account Number : " +bie.getAccountNumber());
+		System.out.println("Account Holder Name : " +bie.getHolderName());
+		System.out.println("Account balance : " +bie.getBalance());
+		double balAmt= bie.deposit(1000);
+		bie.setBalance(balAmt);
+		System.out.println("Amount after deposited:" + balAmt);
+		System.out.println("Balance after deposit:" +bie.getBalance());
+		balAmt = bie.withdraw(5000);
+		bie.setBalance(balAmt);
+		System.out.println("Amount After withdraw:"+balAmt);
+		
+		System.out.println("Balance Amount in the Account is:"+bie.displayAccountInfo());
+		
+	}
+}
