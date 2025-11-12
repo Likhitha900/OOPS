@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+C:\Users\ltangutu\OneDrive - Cisco\Desktop\OOPS\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1693901574.index
-4161672706.index
-3326674454.index
-3529962976.index
-3027130885.index
-1399567983.index
-3040649907.index
